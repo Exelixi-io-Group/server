@@ -22,6 +22,7 @@ db.once("open", () => {
 });
 
 const app = express();
+app.use("/", express.static("Public"));
 app.use(express.json());
 // Use the cors middleware and whitelist all URLs
 app.use(
@@ -29,7 +30,7 @@ app.use(
     origin: true,
   })
 );
-app.use("/", userRoute);
+app.use("/v1/data", userRoute);
 app.listen(3000, () => {
   console.log("Server Running on Port 3000");
 });
