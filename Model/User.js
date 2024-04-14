@@ -1,113 +1,115 @@
 // Importing necessary modules
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 // Define the education schema
 const educationSchema = new mongoose.Schema({
   schoolName: {
     type: String,
-    required: true
+    required: true,
   },
   schoolLocation: {
     type: String,
-    required: true
+    required: true,
   },
   schoolYearOfPassing: {
     type: String,
-    required: true
+    required: true,
   },
   collegeName: {
     type: String,
-    required: true
+    required: true,
   },
   collegeLocation: {
     type: String,
-    required: true
+    required: true,
   },
   collegeStream: {
     type: String,
-    required: true
+    required: true,
   },
   collegeFieldOfStudy: {
     type: String,
-    required: true
+    required: true,
   },
   institutionName: {
     type: String,
-    required: true
+    required: true,
   },
   institutionLocation: {
     type: String,
-    required: true
+    required: true,
   },
   degree: {
     type: String,
-    required: true
+    required: true,
   },
   discipline: {
     type: String,
-    required: true
+    required: true,
   },
   institutionYearOfPassing: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 
 // Define the user schema
 const userSchema = new mongoose.Schema({
   firstName: {
     type: String,
-    required: true
+    required: true,
   },
   lastName: {
     type: String,
-    required: true
+    required: true,
   },
-  /* dob: {
+  dob: {
     type: String,
-    required: true
+    required: true,
   },
   fatherName: {
     type: String,
-    required: true
+    required: true,
   },
   motherName: {
     type: String,
-    required: true
+    required: true,
   },
   adharNumber: {
     type: String,
-    required: true
+    required: true,
   },
   panNumber: {
     type: String,
-    required: true
+    required: true,
   },
   email: {
     type: String,
-    required: true
+    required: true,
   },
   altEmail: {
     type: String,
-    required: true
+    required: true,
   },
   phoneNumber: {
     type: String,
-    required: true
+    required: true,
   },
   address: {
     type: String,
-    required: true
+    required: true,
   },
   education: educationSchema,
-  workExperience:{
+  workExperience: {
     type: Array,
-    required:true
-  } */
+  },
+  referalCode: {
+    type: String,
+  },
 });
 
 // Create a model using the schema
-const User = mongoose.model('user', userSchema);
+const User = mongoose.model("user", userSchema);
 
 // Export the model
 export default User;
